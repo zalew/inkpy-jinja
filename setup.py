@@ -32,7 +32,7 @@ setup(
     zip_safe=False,  # because templates are loaded from file path
     install_requires=[
         'django>=1.4.13',
-        'django_rq==0.4.5',
+        'django_rq==0.6.2',
     ],
     classifiers=[
         "Development Status :: 3 - Alpha",
