@@ -9,7 +9,14 @@ import datetime
 import os
 import unittest
 
+try:
+    import django_rq
+except ImportError:
+    django_rq = False
+
 import inkpy
+import inkpy.api
+
 
 os.environ['DJANGO_SETTINGS_MODULE'] = 'inkpy.tests.settings'
 
@@ -38,6 +45,10 @@ class BaseTests(unittest.TestCase):
         rendered = converter._django_renderer(file_content)
         self.assertEqual(rendered, OK)
 
+    @unittest.skipIf(django_rq, 'django_rq is installed')
+    def test_async_require_django_rq(self):
+        with self.assertRaises(RuntimeError):
+            inkpy.api.generate_pdf_async('test.odt', 'test.pdf', {})
 
 if __name__ == '__main__':
     unittest.main()

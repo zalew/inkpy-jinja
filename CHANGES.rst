@@ -1,6 +1,14 @@
 Change Log
 ----------
 
+0.1.0
+~~~~~
+
+Released on TBA
+
+* removed django_rq from required (now is optional)
+
+
 0.1.0-alpha
 ~~~~~~~~~~~
 

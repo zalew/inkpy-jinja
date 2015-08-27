@@ -8,7 +8,7 @@ InkPy
 
 .. image:: https://travis-ci.org/quamilek/InkPy.svg?branch=develop
     :target: https://travis-ci.org/quamilek/InkPy
-    
+
 .. image:: https://coveralls.io/repos/quamilek/InkPy/badge.png
   :target: https://coveralls.io/r/quamilek/InkPy
 
@@ -48,3 +48,13 @@ To install LibreOffice in Ubuntu use::
 To run LibreOffice service use::
 
   $ soffice --nologo --headless --nofirststartwizard --accept='socket,host=127.0.0.1,port=2002,tcpNoDelay=1;urp;StarOffice.Service'
+
+If you want generate document asynchronously install InkPy with django_rq::
+
+  $ pip install inkpy[async]
+
+or::
+
+  $ pip install django_rq
+
+and use ``generate_pdf_async`` instead of ``generate_pdf``.
