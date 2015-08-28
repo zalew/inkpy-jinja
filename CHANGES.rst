@@ -7,6 +7,7 @@ Change Log
 Released on TBA
 
 * removed django_rq from required (now is optional)
+* test with various version of Django
 
 
 0.1.0-alpha

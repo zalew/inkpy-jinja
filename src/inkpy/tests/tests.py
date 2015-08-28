@@ -18,7 +18,7 @@ import inkpy
 import inkpy.api
 
 
-os.environ['DJANGO_SETTINGS_MODULE'] = 'inkpy.tests.settings'
+os.environ['DJANGO_SETTINGS_MODULE'] = 'tests.settings'
 
 
 class MockedConverter(inkpy.Converter):
